@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteveBox - 我的世界多功能辅助工具</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+        .section {
+            scroll-margin-top: 72px;
+        }
+        /* 确保所有板块标题和内容字体统一 */
+        .feature-section h2,
+        .feature-section p,
+        .feature-section h3,
+        .tech-section h2,
+        .tech-section p,
+        .tech-section h3,
+        .tech-section h4 {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                    <img src="https://i.imgs.ovh/2025/11/27/Ck5AXX.png" alt="SteveBox Logo" class="w-8 h-8 rounded-full object-cover">
+                </div>
+                <h1 class="text-xl font-bold">stevebox</h1>
+            </div>
+            
+            <!-- Centered navigation -->
+            <nav class="hidden md:flex justify-center space-x-8 flex-1">
+                <a href="#" class="hover:text-purple-400 transition-colors">主页</a>
+                <a href="#" class="hover:text-purple-400 transition-colors">快速开始</a>
+                <a href="#" class="hover:text-purple-400 transition-colors">关于我们</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white hover:text-purple-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Centered navigation for mobile view -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-2 border-t border-gray-800">
+            <nav class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-purple-400 transition-colors">主页</a>
+                <a href="#" class="hover:text-purple-400 transition-colors">快速开始</a>
+                <a href="#" class="hover:text-purple-400 transition-colors">关于我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background image -->
+        <div class="absolute inset-0">
+            <img src="https://i.imgs.ovh/2025/11/25/Cb6avL.webp" alt="SteveBox Interface" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/90"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                SteveBox - 网易我的世界基岩版全能辅助工具，核心集成远程崩服、智能连点器、文本刷屏，一键解锁高效游戏体验
+            </h1>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <button class="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                    获取 Windows 版本
+                </button>
+                <button class="px-8 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition-colors">
+                    功能使用文档
+                </button>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="section py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6">三大核心功能，直击游戏需求</h2>
+                    <p class="text-gray-300 mb-6">
+                        专为我的世界玩家量身打造，无需复杂配置，轻量化设计不占用过多系统资源，运行稳定不影响游戏帧率，上手即用的全能辅助工具。
+                    </p>
+                    <p class="text-gray-300">
+                        聚焦核心实用功能：远程崩服支持精准目标操作，连点器可自定义参数适配多场景，文本刷屏实现快速信息传递，满足玩家多样化游戏需求。
+                    </p>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-900 p-6 rounded-lg">
+                        <img src="https://i.imgs.ovh/2025/11/24/CTpZZg.png" alt="SteveBox Core Features" class="w-full rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Details Section -->
+    <section class="section py-20 bg-black feature-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">功能详解，赋能游戏体验</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    每个核心功能都经过优化适配，兼顾实用性与便捷性，让你在游戏中更具优势
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-3xl mb-4">💥 远程崩服</div>
+                    <h3 class="text-xl font-semibold mb-3">精准目标操作</h3>
+                    <p class="text-gray-300">无需专业技术背景，可视化操作界面，精准定位目标服务器，一键执行操作，适配主流我的世界基岩版服务器，操作流程简化高效。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-3xl mb-4">⚡ 智能连点器</div>
+                    <h3 class="text-xl font-semibold mb-3">自定义参数适配</h3>
+                    <p class="text-gray-300">支持连点频率（1-100次/秒）、点击间隔、触发方式（快捷键/自动触发）设置，左键/右键独立配置，完美适配挖矿、建筑、战斗等多种游戏场景。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-3xl mb-4">📝 文本刷屏</div>
+                    <h3 class="text-xl font-semibold mb-3">快速信息传递</h3>
+                    <p class="text-gray-300">自定义刷屏内容、发送间隔（0.1-10秒）、循环次数，支持多文本顺序发送，适用于服务器公告、团队沟通、快速互动等场景，操作简单高效。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-3xl mb-4">🔧 稳定兼容</div>
+                    <h3 class="text-xl font-semibold mb-3">轻量化适配设计</h3>
+                    <p class="text-gray-300">软件体积不足50MB，运行内存占用低于80MB，兼容Windows 10/11全系统，完美适配网易我的世界基岩版各版本，启动快速不闪退。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section py-20 bg-black tech-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">多语言融合技术架构</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    融合多种主流编程语言与框架，打造稳定、高效、兼容的技术底座，为核心功能提供坚实支撑
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-4xl mb-4">🔷 C#</div>
+                    <h3 class="text-2xl font-bold mb-2">核心功能开发</h3>
+                    <h4 class="text-lg font-medium mb-3 text-purple-400">基于 .NET Core 9.0</h4>
+                    <p class="text-gray-300">采用 C# 结合 .NET Core 9.0 开发核心功能模块，保障远程崩服、连点器的运行稳定性与执行效率，具备优秀的跨平台兼容性。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-4xl mb-4">⚛️ JavaScript/React</div>
+                    <h3 class="text-2xl font-bold mb-2">前端交互界面</h3>
+                    <h4 class="text-lg font-medium mb-3 text-purple-400">React + Next.js 驱动</h4>
+                    <p class="text-gray-300">通过 JavaScript 生态构建前端界面，React 负责交互逻辑，Next.js 优化加载速度，让参数配置、功能开关等操作流畅直观。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-4xl mb-4">🎨 CSS/Tailwind</div>
+                    <h3 class="text-2xl font-bold mb-2">界面样式设计</h3>
+                    <h4 class="text-lg font-medium mb-3 text-purple-400">Tailwind CSS 框架</h4>
+                    <p class="text-gray-300">使用 CSS 结合 Tailwind 框架实现响应式界面设计，适配不同分辨率设备，确保功能面板、设置界面布局美观且操作便捷。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-4xl mb-4">⚙️ Python</div>
+                    <h3 class="text-2xl font-bold mb-2">辅助功能模块</h3>
+                    <h4 class="text-lg font-medium mb-3 text-purple-400">数据处理与适配</h4>
+                    <p class="text-gray-300">通过 Python 开发数据处理、服务器适配等辅助模块，优化远程崩服的目标识别精度，提升连点器参数计算的准确性。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-4xl mb-4">🌐 HTML5</div>
+                    <h3 class="text-2xl font-bold mb-2">网页管理端</h3>
+                    <h4 class="text-lg font-medium mb-3 text-purple-400">跨端访问支持</h4>
+                    <p class="text-gray-300">基于 HTML5 构建网页管理端，支持通过浏览器远程配置工具参数，实现功能开关、数据同步等操作，提升使用灵活性。</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    <div class="text-4xl mb-4">🐘 SQL</div>
+                    <h3 class="text-2xl font-bold mb-2">数据存储管理</h3>
+                    <h4 class="text-lg font-medium mb-3 text-purple-400">PostgreSQL 数据库</h4>
+                    <p class="text-gray-300">使用 SQL 语言结合 PostgreSQL 数据库，存储用户配置、功能参数、使用记录等数据，确保数据持久化，下次启动自动加载。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section py-20 bg-gradient-to-br from-gray-900 to-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">解锁我的世界全能辅助！下载 SteveBox，即刻拥有远程崩服、连点器、文本刷屏核心功能</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <button class="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                    立即下载
+                </button>
+                <button class="px-8 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition-colors">
+                    查看使用教程
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                            <img src="https://i.imgs.ovh/2025/11/27/Ck5AXX.png" alt="SteveBox Logo" class="w-8 h-8 rounded-full object-cover">
+                        </div>
+                        <h1 class="text-xl font-bold">stevebox</h1>
+                    </div>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <a href="https://space.bilibili.com/3546815194467241" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center">
+                        <img src="https://i2.hdslb.com/bfs/archive/ac7edcb6a0cd83bc3a7a7a0a3730ba69c17f47ab.png" alt="Bilibili" class="w-5 h-5 mr-2 rounded-full">
+                        作者bilibili主页
+                    </a>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-purple-400 transition-colors">主页</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors">快速开始</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors">关于我们</a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
+                © 2025 SteveBox. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/95', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('bg-black/95', 'backdrop-blur-md');
+            }
+        });
+
+        // Mobile menu toggle
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
+
