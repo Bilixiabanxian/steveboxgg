@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteveBox - 快速开始指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+        .section {
+            scroll-margin-top: 72px;
+        }
+        /* 确保所有板块标题和内容字体统一 */
+        .feature-section h2,
+        .feature-section p,
+        .feature-section h3,
+        .tech-section h2,
+        .tech-section p,
+        .tech-section h3,
+        .tech-section h4 {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                    <img src="https://i.imgs.ovh/2025/11/27/Ck5AXX.png" alt="SteveBox Logo" class="w-8 h-8 rounded-full object-cover">
+                </div>
+                <h1 class="text-xl font-bold">stevebox</h1>
+            </div>
+            
+            <!-- Centered navigation -->
+            <nav class="hidden md:flex justify-center space-x-8 flex-1">
+                <a href="index.html" class="hover:text-purple-400 transition-colors">主页</a>
+                <a href="#" class="text-purple-400 font-medium">快速开始</a>
+                <a href="about.html" class="hover:text-purple-400 transition-colors">关于我们</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white hover:text-purple-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Centered navigation for mobile view -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-2 border-t border-gray-800">
+            <nav class="flex justify-center space-x-6">
+                <a href="index.html" class="hover:text-purple-400 transition-colors">主页</a>
+                <a href="#" class="text-purple-400 font-medium">快速开始</a>
+                <a href="about.html" class="hover:text-purple-400 transition-colors">关于我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section relative h-96 flex items-center justify-center overflow-hidden">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                SteveBox 快速开始指南
+            </h1>
+            <p class="text-xl text-gray-300 mb-8">
+                三步轻松获取并安装 SteveBox 全能辅助工具
+            </p>
+            <!-- 突出显示提取码 -->
+            <div class="bg-purple-900/30 border border-purple-500/50 rounded-xl px-6 py-3 inline-block mb-4">
+                <span class="text-2xl font-bold text-purple-300">提取码：</span>
+                <span class="text-3xl font-extrabold text-white bg-purple-500/20 px-4 py-1 rounded-lg">3l98</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="section py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-2xl p-8 mb-12">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 flex justify-center">
+                            <!-- 更换为指定图标 -->
+                            <div class="w-32 h-32 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden">
+                                <img src="https://i.imgs.ovh/2025/11/27/Ck5AXX.png" alt="SteveBox Icon" class="w-32 h-32 object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 text-center md:text-left">
+                            <h2 class="text-3xl font-bold mb-4">获取 Windows 版本</h2>
+                            <p class="text-gray-300 mb-6 text-lg">
+                                SteveBox 专为 Windows 10/11 系统优化，一键安装，即刻体验三大核心功能
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                                <!-- 点击按钮打开指定网址 -->
+                                <button id="download-btn" class="px-8 py-4 bg-white text-black rounded-xl font-bold text-lg hover:bg-gray-200 transition-colors shadow-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" class="mr-2">
+                                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                    </svg>
+                                    立即获取
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="section py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">需要帮助？</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    如果在下载或使用过程中遇到任何问题，请通过以下方式联系我们
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
+                        <div class="text-4xl mb-4">📺</div>
+                        <h3 class="text-xl font-bold mb-3">视频教程</h3>
+                        <p class="text-gray-300 mb-4">详细的安装和使用视频教程</p>
+                        <a href="https://space.bilibili.com/3546815194467241" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                            <span>查看教程</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="ml-2">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
+                        <div class="text-4xl mb-4">📄</div>
+                        <h3 class="text-xl font-bold mb-3">完整文档</h3>
+                        <p class="text-gray-300 mb-4">包含所有功能的详细参数说明</p>
+                        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            <span>查看文档</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="ml-2">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">
+                        <div class="text-4xl mb-4">💬</div>
+                        <h3 class="text-xl font-bold mb-3">技术支持</h3>
+                        <p class="text-gray-300 mb-4">遇到问题？获取实时技术支持</p>
+                        <a href="https://space.bilibili.com/3546815194467241" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300 transition-colors">
+                            <span>联系作者</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="ml-2">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+                            <img src="https://i.imgs.ovh/2025/11/27/Ck5AXX.png" alt="SteveBox Logo" class="w-8 h-8 rounded-full object-cover">
+                        </div>
+                        <h1 class="text-xl font-bold">stevebox</h1>
+                    </div>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <a href="https://space.bilibili.com/3546815194467241" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center">
+                        <img src="https://i2.hdslb.com/bfs/archive/ac7edcb6a0cd83bc3a7a7a0a3730ba69c17f47ab.png" alt="Bilibili" class="w-5 h-5 mr-2 rounded-full">
+                        作者bilibili主页
+                    </a>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html" class="hover:text-purple-400 transition-colors">主页</a>
+                    <a href="#" class="text-purple-400 font-medium">快速开始</a>
+                    <a href="about.html" class="hover:text-purple-400 transition-colors">关于我们</a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500">
+                © 2025 SteveBox. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const downloadBtn = document.getElementById('download-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/95', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('bg-black/95', 'backdrop-blur-md');
+            }
+        });
+
+        // Mobile menu toggle
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // 点击下载按钮打开指定网址
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', () => {
+                window.open('https://wwxr.lanzoum.com/b00mpyl0ze', '_blank');
+            });
+        }
+
+        // 复制Hero区域提取码功能
+        document.querySelector('.bg-purple-900\\/30 .text-3xl').addEventListener('click', function() {
+            const text = this.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = this.textContent;
+                this.textContent = '已复制!';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
