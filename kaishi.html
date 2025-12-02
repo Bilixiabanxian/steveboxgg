@@ -47,9 +47,9 @@
                 <h1 class="text-xl font-bold">stevebox</h1>
             </div>
             
-            <!-- Centered navigation -->
+            <!-- Centered navigation - 主页重定向到指定链接 -->
             <nav class="hidden md:flex justify-center space-x-8 flex-1">
-                <a href="index.html" class="hover:text-purple-400 transition-colors">主页</a>
+                <a href="https://steveboxnb.netlify.app" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">主页</a>
                 <a href="#" class="text-purple-400 font-medium">快速开始</a>
                 <a href="about.html" class="hover:text-purple-400 transition-colors">关于我们</a>
             </nav>
@@ -65,10 +65,10 @@
             </div>
         </div>
         
-        <!-- Centered navigation for mobile view -->
+        <!-- Centered navigation for mobile view - 主页重定向到指定链接 -->
         <div id="mobile-menu" class="hidden md:hidden px-6 py-2 border-t border-gray-800">
             <nav class="flex justify-center space-x-6">
-                <a href="index.html" class="hover:text-purple-400 transition-colors">主页</a>
+                <a href="https://steveboxnb.netlify.app" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">主页</a>
                 <a href="#" class="text-purple-400 font-medium">快速开始</a>
                 <a href="about.html" class="hover:text-purple-400 transition-colors">关于我们</a>
             </nav>
@@ -87,10 +87,10 @@
             <p class="text-xl text-gray-300 mb-8">
                 三步轻松获取并安装 SteveBox 全能辅助工具
             </p>
-            <!-- 突出显示提取码 -->
+            <!-- 突出显示提取码 - 移除复制功能，仅静态显示 -->
             <div class="bg-purple-900/30 border border-purple-500/50 rounded-xl px-6 py-3 inline-block mb-4">
                 <span class="text-2xl font-bold text-purple-300">提取码：</span>
-                <span class="text-3xl font-extrabold text-white bg-purple-500/20 px-4 py-1 rounded-lg">3l98</span>
+                <span class="text-3xl font-extrabold text-white bg-purple-500/20 px-4 py-1 rounded-lg cursor-default">3l98</span>
             </div>
         </div>
     </section>
@@ -179,7 +179,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - 主页重定向到指定链接 -->
     <footer class="bg-black border-t border-gray-800 py-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -200,7 +200,7 @@
                 </div>
                 
                 <div class="flex space-x-6">
-                    <a href="index.html" class="hover:text-purple-400 transition-colors">主页</a>
+                    <a href="https://steveboxnb.netlify.app" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">主页</a>
                     <a href="#" class="text-purple-400 font-medium">快速开始</a>
                     <a href="about.html" class="hover:text-purple-400 transition-colors">关于我们</a>
                 </div>
@@ -241,17 +241,7 @@
             });
         }
 
-        // 复制Hero区域提取码功能
-        document.querySelector('.bg-purple-900\\/30 .text-3xl').addEventListener('click', function() {
-            const text = this.textContent;
-            navigator.clipboard.writeText(text).then(() => {
-                const originalText = this.textContent;
-                this.textContent = '已复制!';
-                setTimeout(() => {
-                    this.textContent = originalText;
-                }, 2000);
-            });
-        });
+        // 移除提取码复制功能（已删除相关代码）
     </script>
 </body>
 </html>
