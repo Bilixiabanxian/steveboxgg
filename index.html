@@ -47,12 +47,12 @@
                 <h1 class="text-xl font-bold">stevebox</h1>
             </div>
             
-            <!-- Centered navigation -->
+            <!-- Centered navigation - 直接当前页重定向 -->
             <nav class="hidden md:flex justify-center space-x-8 flex-1">
                 <a href="#" class="hover:text-purple-400 transition-colors">主页</a>
-                <!-- 修改快速开始链接 -->
-                <a href="https://steveboxnb.netlify.app/kaishi" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">快速开始</a>
-                <a href="#" class="hover:text-purple-400 transition-colors">关于我们</a>
+                <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">快速开始</a>
+                <!-- 顶部栏关于我们重定向到指定链接 -->
+                <a href="https://steveboxnb.netlify.app/about" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">关于我们</a>
             </nav>
             
             <div class="md:hidden">
@@ -66,13 +66,13 @@
             </div>
         </div>
         
-        <!-- Centered navigation for mobile view -->
+        <!-- Mobile navigation - 直接当前页重定向 -->
         <div id="mobile-menu" class="hidden md:hidden px-6 py-2 border-t border-gray-800">
             <nav class="flex justify-center space-x-6">
                 <a href="#" class="hover:text-purple-400 transition-colors">主页</a>
-                <!-- 修改移动端快速开始链接 -->
-                <a href="https://steveboxnb.netlify.app/kaishi" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">快速开始</a>
-                <a href="#" class="hover:text-purple-400 transition-colors">关于我们</a>
+                <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">快速开始</a>
+                <!-- 移动端关于我们重定向到指定链接 -->
+                <a href="https://steveboxnb.netlify.app/about" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">关于我们</a>
             </nav>
         </div>
     </header>
@@ -92,11 +92,12 @@
                 SteveBox - 网易我的世界基岩版全能辅助工具，核心集成远程崩服、智能连点器、文本刷屏，一键解锁高效游戏体验
             </h1>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                <button class="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                <!-- 获取 Windows 版本 - 当前页重定向 -->
+                <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
                     获取 Windows 版本
-                </button>
-                <!-- 修改功能使用文档按钮为快速开始，跳转到指定链接 -->
-                <a href="https://steveboxnb.netlify.app/kaishi" target="_blank" rel="noopener noreferrer" class="px-8 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center">
+                </a>
+                <!-- 快速开始 - 当前页重定向 -->
+                <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="px-8 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center">
                     快速开始
                 </a>
             </div>
@@ -222,11 +223,12 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-6">解锁我的世界全能辅助！下载 SteveBox，即刻拥有远程崩服、连点器、文本刷屏核心功能</h2>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                <button class="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                <!-- 立即下载 - 当前页重定向 -->
+                <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
                     立即下载
-                </button>
-                <!-- 修改查看使用教程按钮为快速开始，跳转到指定链接 -->
-                <a href="https://steveboxnb.netlify.app/kaishi" target="_blank" rel="noopener noreferrer" class="px-8 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center">
+                </a>
+                <!-- 快速开始 - 当前页重定向 -->
+                <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="px-8 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition-colors inline-flex items-center justify-center">
                     快速开始
                 </a>
             </div>
@@ -255,9 +257,10 @@
                 
                 <div class="flex space-x-6">
                     <a href="#" class="hover:text-purple-400 transition-colors">主页</a>
-                    <!-- 修改页脚快速开始链接 -->
-                    <a href="https://steveboxnb.netlify.app/kaishi" target="_blank" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">快速开始</a>
-                    <a href="#" class="hover:text-purple-400 transition-colors">关于我们</a>
+                    <!-- 底部快速开始 - 当前页重定向 -->
+                    <a href="https://steveboxnb.netlify.app/kaishi" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">快速开始</a>
+                    <!-- 底部关于我们 - 当前页重定向 -->
+                    <a href="https://steveboxnb.netlify.app/about" rel="noopener noreferrer" class="hover:text-purple-400 transition-colors">关于我们</a>
                 </div>
             </div>
             
